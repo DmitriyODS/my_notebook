@@ -1,0 +1,24 @@
+.root {
+    width: 16rem;
+    height: 16rem;
+    background-color: rgba(217, 228, 238, 0.32);
+    border: solid 1px #FFFFFF;
+    border-radius: 1rem;
+    transition: all 100ms ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 1rem;
+    box-sizing: border-box;
+    margin: 1rem;
+    color: #234968;
+    font-family: 'Roboto Serif', serif;
+    font-size: 1rem;
+}
+
+.root:hover {
+    background-color: rgba(217, 228, 238, 0.48);
+}
+
+.root:active {
+    transform: scale(0.98);
+}

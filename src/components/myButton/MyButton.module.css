@@ -1,0 +1,9 @@
+.root {
+    width: min-content;
+    height: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 32rem;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+}
