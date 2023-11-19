@@ -1,16 +1,27 @@
-import PageSlider from "./components/pageSlider/PageSlider";
 import {useState} from "react";
+import {
+    actionHideDialog,
+    actionShowDialog,
+    useDialogDispatch
+} from "./state/dialogProvider/DialogProvider";
+import DataCard from "./components/dataCard/DataCard";
+import {
+    AddNewTodoInItems,
+    DeleteTodoByID,
+    GetTodoByID,
+    SwitchStatusAllTodos,
+    SwitchStatusTodoByID
+} from "./utils";
+import PageSlider from "./components/pageSlider/PageSlider";
 import DialogModal from "./components/modal/DialogModal";
 import AppHeader from "./components/appHeader/AppHeader";
 import AppTitle from "./components/appTitle/AppTitle";
-import {actionHideDialog, actionShowDialog, useDialogDispatch} from "./state/dialogProvider/DialogProvider";
 import AppButton from "./components/appButton/AppButton";
 import ButtonBox from "./components/buttonBox/ButtonBox";
 import AppBody from "./components/appBody/AppBody";
 import AddCard from "./components/addCard/AddCard";
-import DataCard from "./components/dataCard/DataCard";
 import App from "./components/app/App";
-import {AddNewTodoInItems, DeleteTodoByID, GetTodoByID, SwitchStatusAllTodos, SwitchStatusTodoByID} from "./utils";
+
 
 function Main() {
     // создаём переменные для хранения данных
@@ -89,44 +100,14 @@ function Main() {
     }
 
     // функция для изменения статуса всем карточкам
-    const onSwitchStatusAllTodos = () => {
-        const newTodoItems = SwitchStatusAllTodos(todoItems);
-        setTodoItems(newTodoItems);
-    }
+    // TODO: здесь мы напишем свою функцию изменения статуса всех карточек
 
     // возвращаем готовую разметку из функции
+    // TODO: здесь мы будем писать свой код разметки
     return (
-        <App color={"blue"}>
-            <DialogModal
-                curTodo={curTodo}
-                onCloseDialog={onCloseDialog}
-                addNewTodo={onAddNewTodo}
-            />
-            <AppHeader>
-                <AppTitle>My notebook</AppTitle>
-                <PageSlider
-                    color={"blue"}
-                    selectedID={curFilter}
-                    changeSection={setCurFilter}
-                />
-                <ButtonBox>
-                    <AppButton
-                        title={"Всё готово"}
-                        color={"yellow"}
-                        onClick={onSwitchStatusAllTodos}
-                    />
-                    <AppButton
-                        title={"Удалить все"}
-                        color={"red"}
-                        onClick={onClearTodos}
-                    />
-                </ButtonBox>
-            </AppHeader>
-            <AppBody>
-                <AddCard onClick={onShowDialogCreateCard}/>
-                {renderItems()}
-            </AppBody>
-        </App>
+        <div>
+            Здесь пока ничего нет, напиши разметку :)
+        </div>
     );
 }
 
