@@ -99,7 +99,7 @@
     background-color: rgba(203, 123, 113, 1);
 }
 
-.btn_create {
+.cardCreate {
     border: none;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
@@ -109,10 +109,10 @@
     width: 8rem;
 }
 
-.btn_create:hover {
+.cardCreate:hover {
     background-color: rgba(113, 203, 122, 0.82);
 }
 
-.btn_create:active {
+.cardCreate:active {
     background-color: rgba(113, 203, 122, 1);
 }

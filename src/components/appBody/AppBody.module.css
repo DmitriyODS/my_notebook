@@ -1,0 +1,10 @@
+.root {
+    margin: auto;
+    width: 74%;
+    height: calc(100% - 164px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 4rem;
+    overflow: auto;
+}

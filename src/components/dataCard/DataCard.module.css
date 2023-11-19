@@ -1,0 +1,45 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+
+.bottomBar {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+}
+
+.btnDrop {
+    background-color: rgba(69, 159, 241, 0.64);
+    color: #ffffff;
+    border: none;
+    height: 2rem !important;
+    transition: all 100ms ease-in-out;
+}
+
+.btnDrop:hover {
+    background-color: rgba(69, 159, 241, 0.82);
+}
+
+.btnDone {
+    background-color: rgba(59, 136, 86, 0.64);
+    color: #ffffff;
+    border: none;
+    height: 2rem !important;
+    transition: all 100ms ease-in-out;
+}
+
+.btnDone:hover {
+    background-color: rgba(59, 136, 86, 0.82);
+}

@@ -1,0 +1,9 @@
+.root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.root > button:not(:last-child) {
+    margin-right: 1rem;
+}

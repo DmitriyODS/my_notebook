@@ -1,0 +1,75 @@
+.root {
+
+}
+
+.btn_blue {
+    background-color: rgba(123, 154, 222, 0.32);
+    border: solid 1px #497ece;
+    color: #093050;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.btn_blue:hover {
+    background-color: rgba(123, 173, 222, 0.64);
+}
+
+.btn_blue:active {
+    background-color: rgb(123, 166, 222);
+    color: #ffffff;
+}
+
+.btn_green {
+    background-color: rgba(59, 136, 86, 0.64);
+    border: solid 1px #105009;
+    color: #105009;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.btn_green:hover {
+    background-color: rgba(123, 222, 151, 0.64);
+}
+
+.btn_green:active {
+    background-color: rgb(123, 222, 139);
+    color: #ffffff;
+}
+
+.btn_red {
+    background-color: rgba(222, 123, 123, 0.32);
+    border: solid 1px #ce5b49;
+    color: #501509;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.btn_red:hover {
+    background-color: rgba(222, 123, 123, 0.64);
+}
+
+.btn_red:active {
+    background-color: rgba(222, 123, 123, 1);
+    color: #ffffff;
+}
+
+.btn_yellow {
+    background-color: rgba(222, 199, 123, 0.32);
+    border: solid 1px #cea849;
+    color: #503c09;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.btn_yellow:hover {
+    background-color: rgba(222, 214, 123, 0.64);
+}
+
+.btn_yellow:active {
+    background-color: rgb(222, 209, 123);
+    color: #ffffff;
+}

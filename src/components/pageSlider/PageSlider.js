@@ -1,10 +1,53 @@
 import styles from './PageSlider.module.css';
 
+// пункты для фильтра карточек
+const sectionItems = [
+    {
+        id: 0, title: 'ВСЕ'
+    },
+    {
+        id: 1, title: 'НОВЫЕ'
+    },
+    {
+        id: 2, title: 'ГОТОВО'
+    }
+];
+
 function PageSlider(props) {
-    const items = props.items.map((it) => {
-        let styleClasses = `${styles.item}`;
+    let bodyColor = styles.blue;
+    let activeColor = styles.activeBlue;
+    let itemColor = styles.itemBlue;
+    switch (props.color) {
+        case "blue": {
+            bodyColor = styles.blue;
+            activeColor = styles.activeBlue;
+            itemColor = styles.itemBlue;
+            break;
+        }
+        case "green": {
+            bodyColor = styles.green;
+            activeColor = styles.activeGreen;
+            itemColor = styles.itemGreen;
+            break;
+        }
+        case "red": {
+            bodyColor = styles.red;
+            activeColor = styles.activeRed;
+            itemColor = styles.itemRed;
+            break;
+        }
+        case "yellow": {
+            bodyColor = styles.yellow;
+            activeColor = styles.activeYellow;
+            itemColor = styles.itemYellow;
+            break;
+        }
+    }
+
+    const items = sectionItems.map((it) => {
+        let styleClasses = `${itemColor}`;
         if (it.id === props.selectedID) {
-            styleClasses += ` ${styles.active}`;
+            styleClasses += ` ${activeColor}`;
         }
 
         return (
@@ -19,7 +62,7 @@ function PageSlider(props) {
     })
 
     return (
-        <div className={styles.root}>
+        <div className={bodyColor}>
             {items}
         </div>
     );
