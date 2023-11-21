@@ -1,0 +1,142 @@
+Первый этап - создаём "каркас" для нашего приложения.
+Добавим на страницу тег в котором будет размещаться все наши будущие элементы.
+
+<App color={"blue"}>
+
+</App>
+
+
+
+
+Второй этап - теперь добавим заголовок и кнопки действий для нашего приложения.
+Они у нас будут размещаться сверху.
+
+<App color={"blue"}>
+    <AppHeader>
+        <AppTitle>My notebook</AppTitle>
+        <PageSlider
+            color={"blue"}
+            selectedID={curFilter}
+            changeSection={setCurFilter}
+        />
+        <ButtonBox>
+            <AppButton
+                title={"Удалить все"}
+                color={"red"}
+                onClick={onClearTodos}
+            />
+        </ButtonBox>
+    </AppHeader>
+</App>
+
+
+Третий этап - теперь добавим основное содержание нашего приложения - карточки.
+Для этого разместим после тега заголовка тег - тела нашего приложения.
+
+
+<App color={"blue"}>
+    <AppHeader>
+        <AppTitle>My notebook</AppTitle>
+        <PageSlider
+            color={"blue"}
+            selectedID={curFilter}
+            changeSection={setCurFilter}
+        />
+        <ButtonBox>
+            <AppButton
+                title={"Удалить все"}
+                color={"red"}
+                onClick={onClearTodos}
+            />
+        </ButtonBox>
+    </AppHeader>
+    <AppBody>
+        <AddCard onClick={onShowDialogCreateCard}/>
+        {renderItems()}
+    </AppBody>
+</App>
+
+
+Четвёртый этап - для того, чтобы мы смогли добавлять и просматривать карточки,
+нам нужно специальное окно. Это окно должно отображаться, когда мы нажимаем
+на карточку, или добавляем новую. Давайте добавим тег этого окна выше заголовка.
+
+
+<App color={"blue"}>
+    <DialogModal
+        curTodo={curTodo}
+        onCloseDialog={onCloseDialog}
+        addNewTodo={onAddNewTodo}
+    />
+    <AppHeader>
+        <AppTitle>My notebook</AppTitle>
+        <PageSlider
+            color={"blue"}
+            selectedID={curFilter}
+            changeSection={setCurFilter}
+        />
+        <ButtonBox>
+            <AppButton
+                title={"Удалить все"}
+                color={"red"}
+                onClick={onClearTodos}
+            />
+        </ButtonBox>
+    </AppHeader>
+    <AppBody>
+        <AddCard onClick={onShowDialogCreateCard}/>
+        {renderItems()}
+    </AppBody>
+</App>
+
+
+
+
+
+
+=======================================================
+Дополнительные функции.
+Добавим возможность пометить все карточки, как выполненные.
+Добавим функцию, которая будет отвечать за это.
+
+// функция для изменения статуса всем карточкам
+const onSwitchStatusAllTodos = () => {
+    const newTodoItems = SwitchStatusAllTodos(todoItems);
+    setTodoItems(newTodoItems);
+}
+
+
+
+Теперь добавим кнопку, которая будет реагировать на эту функцию.
+
+<App color={"blue"}>
+    <DialogModal
+        curTodo={curTodo}
+        onCloseDialog={onCloseDialog}
+        addNewTodo={onAddNewTodo}
+    />
+    <AppHeader>
+        <AppTitle>My notebook</AppTitle>
+        <PageSlider
+            color={"blue"}
+            selectedID={curFilter}
+            changeSection={setCurFilter}
+        />
+        <ButtonBox>
+            <AppButton
+                title={"Всё готово"}
+                color={"yellow"}
+                onClick={onSwitchStatusAllTodos}
+            />
+            <AppButton
+                title={"Удалить все"}
+                color={"red"}
+                onClick={onClearTodos}
+            />
+        </ButtonBox>
+    </AppHeader>
+    <AppBody>
+        <AddCard onClick={onShowDialogCreateCard}/>
+        {renderItems()}
+    </AppBody>
+</App>
