@@ -99,6 +99,24 @@
     background-color: rgba(203, 123, 113, 1);
 }
 
+.btn_create {
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    background-color: rgba(113, 203, 122, 0.64);
+    color: #073405;
+    transition: background-color 100ms ease-in-out;
+    width: 8rem;
+}
+
+.btn_create:hover {
+    background-color: rgba(113, 203, 122, 0.82);
+}
+
+.btn_create:active {
+    background-color: rgba(47, 158, 49, 0.68);
+}
+
 .cardCreate {
     border: none;
     font-family: 'Roboto', sans-serif;
