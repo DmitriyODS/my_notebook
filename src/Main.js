@@ -102,13 +102,44 @@ function Main() {
 
     // функция для изменения статуса всем карточкам
     // TODO: здесь мы напишем свою функцию изменения статуса всех карточек
-
+    const onSwitchStatusAllTodos = () => {
+        const newTodoItems = SwitchStatusAllTodos(todoItems);
+        setTodoItems(newTodoItems);
+    }
     // возвращаем готовую разметку из функции
     // TODO: здесь мы будем писать свой код разметки
     return (
-        <div>
-            Здесь пока ничего нет, напиши разметку :)
-        </div>
+        <App color={"blue"}>
+            <DialogModal
+                curTodo={curTodo}
+                onCloseDialog={onCloseDialog}
+                addNewTodo={onAddNewTodo}
+            />
+            <AppHeader>
+                <AppTitle>My notebook</AppTitle>
+                <PageSlider
+                    color={"blue"}
+                    selectedID={curFilter}
+                    changeSection={setCurFilter}
+                />
+                <ButtonBox>
+                    <AppButton
+                        title={"Всё готово"}
+                        color={"yellow"}
+                        onClick={onSwitchStatusAllTodos}
+                    />
+                    <AppButton
+                        title={"Удалить все"}
+                        color={"red"}
+                        onClick={onClearTodos}
+                    />
+                </ButtonBox>
+            </AppHeader>
+            <AppBody>
+                <AddCard onClick={onShowDialogCreateCard}/>
+                {renderItems()}
+            </AppBody>
+        </App>
     );
 }
 
