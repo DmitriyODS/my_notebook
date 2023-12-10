@@ -22,7 +22,7 @@ function DataCard(props) {
                     className={props.todo.isDone ? styles.btnDrop : styles.btnDone}
                     onClick={() => props.onSwitchStatusTodo(props.todo.id)}
                 >
-                    {props.todo.isDone ? 'ОТКРЫТЬ' : 'ГОТОВО'}
+                    {props.todo.isDone ? 'ВЕРНУТЬ' : 'ГОТОВО'}
                 </MyButton>
             </div>
         </ItemCard>

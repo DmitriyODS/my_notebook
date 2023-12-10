@@ -67,6 +67,7 @@ function Main() {
         const newTodoItems = AddNewTodoInItems(todoText, todoItems);
         setTodoItems(newTodoItems);
         dialogDispatch(actionHideDialog);
+        setCurFilter(1);
     }
 
     // функция отображения диалога созданя новой карточки
